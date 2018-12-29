@@ -330,16 +330,16 @@ open class KSTokenField: UITextField {
    Untokenzies the layout
    */
    func untokenize() {
-      if (!_removesTokensOnEndEditing) {
-         return
-      }
-      _state = .closed
-      for subview in _scrollView.subviews {
-         if subview is KSToken {
-            subview.removeFromSuperview()
-         }
-      }
-      updateLayout()
+//      if (!_removesTokensOnEndEditing) {
+//         return
+//      }
+//      _state = .closed
+//      for subview in _scrollView.subviews {
+//         if subview is KSToken {
+//            subview.removeFromSuperview()
+//         }
+//      }
+//      updateLayout()
    }
    
    /**

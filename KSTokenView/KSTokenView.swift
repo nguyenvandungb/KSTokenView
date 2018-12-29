@@ -96,7 +96,7 @@ open class KSTokenView: UIView {
    //__________________________________________________________________________________
    //
    fileprivate var _tokenField: KSTokenField!
-   fileprivate var _searchTableView: UITableView = UITableView(frame: .zero, style: UITableViewStyle.plain)
+   open var _searchTableView: UITableView = UITableView(frame: .zero, style: UITableViewStyle.plain)
    fileprivate var _resultArray = [AnyObject]()
    fileprivate var _showingSearchResult = false
    fileprivate var _indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
@@ -409,7 +409,10 @@ open class KSTokenView: UIView {
       _intrinsicContentHeight = _tokenField.bounds.height
       invalidateIntrinsicContentSize()
    }
-   
+
+    open func reload() {
+        _searchTableView.reloadData()
+    }
    //MARK: - Layout Changes
    //__________________________________________________________________________________
    //
